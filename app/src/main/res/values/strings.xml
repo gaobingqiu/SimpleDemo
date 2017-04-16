@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SimpleDemo</string>
+
+    <string name="to_login">唤起登录</string>
+    <string name="relogin">重新登录</string>
+    <string name="to_detail">账号详情</string>
+    <string name="to_certification">实名认证</string>
+    <string name="check_password">校验密码</string>
+    <string name="web_syn_login">web同步登录</string>
+    <string name="get_account_info">账号信息</string>
+    <string name="get_third_info">第三方信息</string>
+    <string name="get_baidu_info">百度云信息</string>
+    <string name="get_rebaidu_info">重绑百度云</string>
+    <string name="get_space_info">百度云空间信息</string>
+
+    <string name="bt_test_nubia_service">nubia服务</string>
+    <string name="bt_test_account_service">百度云相关服务</string>
+    <string name="bt_bind_service">绑定服务</string>
+
+    <string name="bt_get_nubia_token">nubiaToken</string>
+    <string name="bt_get_baidu_token">百度Token</string>
+    <string name="bt_get_baidu_uid">百度Uid</string>
+    <string name="bt_bind_baidu">绑定百度云</string>
+    <string name="bt_refresh_baidu_token">刷新nubiaToken</string>
+    <string name="bt_login">登录</string>
+    <string name="bt_get_nubia_token_key">nubia tokenKey</string>
+
+    <string name="username">用户名:</string>
+    <string name="password">密码:</string>
+    <string name="confirm">确定</string>
+
+    <string name="response_default">返回信息：</string>
+</resources>
