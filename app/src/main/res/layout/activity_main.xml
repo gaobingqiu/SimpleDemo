@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.nubia.simpledemo.MainActivity">
+
+    <GridLayout
+        android:id="@+id/gl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/bt_to_login"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_login"
+            android:textAllCaps="false"/>
+
+        <requestFocus/>
+
+        <Button
+            android:id="@+id/bt_relogin"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relogin"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_to_detail"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_detail"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_to_certification"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_certification"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_check_password"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_password"/>
+
+        <Button
+            android:id="@+id/bt_web_syn_login"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/web_syn_login"/>
+
+        <Button
+            android:id="@+id/bt_get_account_info"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_account_info"
+            />
+
+        <Button
+            android:id="@+id/bt_get_third_info"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_third_info"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_get_baidu_info"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_baidu_info"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_get_rebaidu_info"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_rebaidu_info"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_get_space_info"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_space_info"
+            android:textAllCaps="false"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/gl"
+        android:background="#FF3030"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_service_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_line1"
+        android:layout_marginTop="10dp"
+        android:text="以下是独立服务："/>
+
+    <LinearLayout
+        android:id="@+id/ll_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_service_tips">
+
+        <Button
+            android:id="@+id/bt_test_nubia_service"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_test_nubia_service"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_test_account_service"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_test_account_service"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_service"
+        android:layout_marginTop="10dp"
+        android:background="#FF3030"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_line2"
+        android:text="@string/response_default"/>
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"/>
+</RelativeLayout>
