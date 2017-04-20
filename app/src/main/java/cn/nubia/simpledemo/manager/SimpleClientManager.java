@@ -15,6 +15,7 @@ import cn.nubia.accountsdk.aidl.SystemAccountInfo;
 import cn.nubia.accountsdk.aidl.ThirdAccountBindInfo;
 import cn.nubia.accountsdk.common.CetificationLackingException;
 import cn.nubia.accountsdk.simpleclient.AccountSimpleClient;
+import cn.nubia.base.LogUtils;
 import cn.nubia.simpledemo.Base.IAccountListener;
 
 /**
@@ -179,6 +180,7 @@ public class SimpleClientManager {
 //		if(!Constants.isLogin()){
 //			return;
 //		}
+		LogUtils.d(url);
 		try {
 			mSimpleClient.appWebSynlogin(url, new IAppWebSynLoginListener.Stub() {
 				@Override

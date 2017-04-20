@@ -7,7 +7,9 @@ import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.WindowManager;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
@@ -62,16 +64,16 @@ public class WebActivity extends Activity {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             Log.d(TAG, "onPageStarted" + "url = " + url);
+            //必须加上以下三行，否则会返回空页面
+            if(TextUtils.equals(url,mSynUrl) && isSynFinish){
+                finish();
+            }
             super.onPageStarted(view, url, favicon);
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
             Log.d(TAG, "onPageFinished" + "url = " + url);
-//			if(!isSynFinish){
-//	            CookieManager cookieManager = CookieManager.getInstance();
-//	            cookieStr = cookieManager.getCookie(url);
-//			}
             super.onPageFinished(view, url);
             if (!isSynFinish) {
                 isSynFinish = true;
@@ -112,4 +114,14 @@ public class WebActivity extends Activity {
         CookieSyncManager.getInstance().sync();
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (mWebView.canGoBack()) {
+                mWebView.goBack();//返回上一页面
+                return true;
+            }
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

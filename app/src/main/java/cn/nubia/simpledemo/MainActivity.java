@@ -177,12 +177,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
     private int mChoice;
     private void showSingleChoiceDialog() {
-        final String[] items = {"http://pre.m.nubia.com/", "http://bbs3.server.ztemt.com.cn/"};
         final AlertDialog.Builder singleChoiceDialog =
                 new AlertDialog.Builder(MainActivity.this);
         singleChoiceDialog.setTitle("请选择url：");
         // 第二个参数是默认选项，此处设置为0
-        singleChoiceDialog.setSingleChoiceItems(items, 0,
+        singleChoiceDialog.setSingleChoiceItems(Constants.WEB_URL, 0,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -193,8 +192,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        mManager.webSynLogin(items[mChoice]);
-                        mUrl = items[mChoice];
+                        mManager.webSynLogin(Constants.WEB_URL[mChoice]);
+                        mUrl = Constants.WEB_URL[mChoice];
                     }
                 });
         singleChoiceDialog.show();
