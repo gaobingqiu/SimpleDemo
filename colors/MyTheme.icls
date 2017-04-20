@@ -1,14 +1,14 @@
-<scheme name="Darcula copy" version="142" parent_scheme="Darcula">
+<scheme name="MyTheme" version="142" parent_scheme="Default">
   <metaInfo>
-    <property name="created">2017-04-20T14:46:31</property>
+    <property name="created">2017-04-20T14:59:47</property>
     <property name="ide">AndroidStudio</property>
     <property name="ideVersion">2.3.1.0</property>
-    <property name="modified">2017-04-20T14:46:40</property>
-    <property name="originalScheme">Darcula</property>
+    <property name="modified">2017-04-20T15:00:48</property>
+    <property name="originalScheme">Default</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.0" />
   <option name="EDITOR_FONT_SIZE" value="14" />
   <option name="CONSOLE_FONT_NAME" value="Monospaced" />
   <option name="CONSOLE_FONT_SIZE" value="12" />
-  <option name="EDITOR_FONT_NAME" value="Monospaced" />
+  <option name="EDITOR_FONT_NAME" value="Lucida Sans Typewriter" />
 </scheme>
